@@ -14,8 +14,13 @@
     <style>
       h1 {
          padding-top: 10vh;
+         color: #7c98d6;
+      }
+      th, tr {
+        color: azure;
       }
       .tb {
+        color: azure;
         display: block;
         margin: 0 auto;
         width: 90%;
@@ -27,7 +32,12 @@
       #add-field {
         width: 50vw;
       }
-      
+      body {
+        background-color: black;
+      }
+      span {
+        color: #bdcfde;
+      }
     </style>
   </head>
   <body>
@@ -41,7 +51,7 @@
           id="add-field"
           class="form-control col mr-2"
         />
-        <button class="btn btn-success" type="submit">Add Participant</button>
+        <button class="btn btn-dark" type="submit">Add Participant</button>
       </form>
       <div class = "tb">
       <table class="table table-striped table-responsive">
@@ -55,7 +65,7 @@
         <tbody>
           <% participants.forEach(participant => { %>
           <tr>
-            <td><a href="#"><%= participant.name %></a></td>
+            <td><span><%= participant.name %></span></td>
             <td><form action="/increment/<%-participant.name%>" method="POST"><button class="btn btn-dark" type="submit">Khalle</button></form></td>
             <td><%= participant.counter %> Khalles</td>
           </tr>
