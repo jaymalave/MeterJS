@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const Member = require("./models/shortUrl");
+const Member = require("./models/members");
 const app = express();
 
 mongoose.connect(
@@ -21,7 +21,6 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/participants", async (req, res) => {
-  // await ShortUrl.insert({ full: req.body.fullUrl })
 
   const data = new Member({ name: req.body.name });
   const savedData = await data.save();
