@@ -57,10 +57,10 @@
       }
       th,
       tr {
-        color: azure;
+        color:aliceblue;
       }
       .tb {
-        color: azure;
+        color:aliceblue;
         display: block;
         margin: 0 auto;
         width: 90%;
@@ -76,7 +76,7 @@
         background-color: black;
       }
       span {
-        color: #bdcfde;
+        color: aliceblue;
       }
       .medals {
         color: aliceblue;
@@ -89,6 +89,9 @@
         color: cornflowerblue;
         font-size: 3vh;
         margin-bottom: 2vh;
+      }
+      #medal {
+        font-size: 4vh;
       }
     </style>
   </head>
@@ -131,9 +134,9 @@
       </div>
       <h2>LeaderBoard</h2>
       <div class="medals">
-        <div>🥇<%= topScorers[0].name %></div>
-        <div>🥈<%= topScorers[1].name %></div>
-        <div>🥉<%= topScorers[2].name %></div>
+        <div><span id = "medal">🥇</span><%= topScorers[0].name %></div>
+        <div><span id = "medal">🥈</span><%= topScorers[1].name %></div>
+        <div><span id = "medal">🥉</span><%= topScorers[2].name %></div>
         
       </div>
     </div>
