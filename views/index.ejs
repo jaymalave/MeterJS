@@ -52,7 +52,7 @@
         overflow-x: none !important;
       }
       h1 {
-        padding-top: 10vh;
+        padding-top: 8vh;
         color: #7c98d6;
       }
       th,
@@ -77,6 +77,18 @@
       }
       span {
         color: #bdcfde;
+      }
+      .medals {
+        color: aliceblue;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      h2 {
+        text-align: center;
+        color: cornflowerblue;
+        font-size: 3vh;
+        margin-bottom: 2vh;
       }
     </style>
   </head>
@@ -116,6 +128,13 @@
             <% }) %>
           </tbody>
         </table>
+      </div>
+      <h2>LeaderBoard</h2>
+      <div class="medals">
+        <div>🥇<%= topScorers[0].name %></div>
+        <div>🥈<%= topScorers[1].name %></div>
+        <div>🥉<%= topScorers[2].name %></div>
+        
       </div>
     </div>
     <script src="../app.js"></script>

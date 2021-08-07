@@ -21,7 +21,8 @@ const bodyParser = require("body-parser");
 
 app.get("/", async (req, res) => {
   const members = await Member.find().sort({ counter: -1 });
-  res.render("index", { participants: members });
+  let topMembers = await Member.find().sort({ counter: -1 }).limit(3);
+  res.render("index", { participants: members, topScorers: topMembers });
 });
 
 app.post("/participants", async (req, res) => {
