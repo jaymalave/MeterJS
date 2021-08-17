@@ -44,6 +44,17 @@ app.post("/increment/:participantName", async (req, res) => {
   res.redirect("/");
 });
 
+app.post("/decrement/:participantName", async (req, res) => {
+  const decrementVal = await Member.findOne({
+    name: req.params.participantName,
+  });
+  if (decrementVal == null) return res.sendStatus(404);
+
+  decrementVal.counter--;
+  decrementVal.save();
+  res.redirect("/");
+});
+
 app.get("/manifest.json", (req, res) => {
   res.send(manifest);
 });

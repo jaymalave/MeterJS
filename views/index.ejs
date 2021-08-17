@@ -114,6 +114,7 @@
             <tr>
               <th>Name</th>
               <th>Add A Joke</th>
+              <th>Reward</th>
               <th>Counter</th>
             </tr>
           </thead>
@@ -124,6 +125,11 @@
               <td>
                 <form action="/increment/<%-participant.name%>" method="POST">
                   <button class="btn btn-dark" type="submit">Khalle</button>
+                </form>
+              </td>
+              <td>
+                <form action="/decrement/<%-participant.name%>" method="POST">
+                  <button class="btn btn-dark" type="submit">NiceOne!</button>
                 </form>
               </td>
               <td><%= participant.counter %> Khalles</td>
