@@ -98,9 +98,9 @@
   </head>
   <body>
     <div class="container">
-      <h1>KhaoMeter</h1>
+      <h1>BadJokesMeter</h1>
       <form action="/participants" method="POST" class="my-4 form-inline">
-        <label for="name" class="sr-only">Url</label>
+        <label for="name" class="sr-only"></label>
         <input
           type="text"
           name="name"
@@ -125,7 +125,7 @@
               <td><span><%= participant.name %></span></td>
               <td>
                 <form action="/increment/<%-participant.name%>" method="POST">
-                  <button class="btn btn-dark" type="submit">Khalle</button>
+                  <button class="btn btn-dark" type="submit">Crap</button>
                 </form>
               </td>
               <td>
@@ -133,7 +133,7 @@
                   <button class="btn btn-dark" type="submit">NiceOne!</button>
                 </form>
               </td>
-              <td><%= participant.counter %> Khalles</td>
+              <td><%= participant.counter %></td>
             </tr>
             <% }) %>
           </tbody>
