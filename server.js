@@ -4,10 +4,11 @@ const Member = require("./models/members");
 const app = express();
 const manifest = require("./manifest.json");
 const fs = require("fs");
+require('dotenv/config')
 // const serviceWorker = require('./serviceworker.js');
 
 mongoose.connect(
-  "mongodb+srv://jaymalave:JayMDB45@cluster0.otmfm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  process.env.DB_CON,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -90,5 +91,7 @@ app.get("/manifest/icon-512x512.png", (req, res) => {
     .send(fs.readFileSync("./manifest/icon-512x512.png"))
     .end();
 });
+
+
 
 app.listen(process.env.PORT || 5000);
